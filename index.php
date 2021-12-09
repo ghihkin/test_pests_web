@@ -13,7 +13,67 @@
 </head>
 <body>
     <main>
+        <div class="menu">
+            <div class="closeMenu" onclick="closeMenu()">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 122.88"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>cross-symbol</title><path class="cls-1" d="M61.44,0A61.44,61.44,0,1,1,0,61.44,61.44,61.44,0,0,1,61.44,0ZM74.58,36.8c1.74-1.77,2.83-3.18,5-1l7,7.13c2.29,2.26,2.17,3.58,0,5.69L73.33,61.83,86.08,74.58c1.77,1.74,3.18,2.83,1,5l-7.13,7c-2.26,2.29-3.58,2.17-5.68,0L61.44,73.72,48.63,86.53c-2.1,2.15-3.42,2.27-5.68,0l-7.13-7c-2.2-2.15-.79-3.24,1-5L49.55,61.83,36.35,48.64c-2.15-2.11-2.27-3.43,0-5.69l7-7.13c2.15-2.2,3.24-.79,5,1L61.44,49.94,74.58,36.8Z"/></svg>
+            </div>
+            <ul class="nav">
+                <li class="nav__item" onclick="closeMenu()">
+                    <a class="nav__item__link" href="#">
+                        Вредители
+                    </a>
+                </li>
+                <li class="nav__item" onclick="closeMenu()">
+                    <a class="nav__item__link" href="#">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+        </div>
         <header>
+            <div class="burger" onclick="openMenu()">
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                        <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 76 76" style="enable-background:new 0 0 76 76;" xml:space="preserve">
+                        <g id="_x37_7_Essential_Icons_35_">
+                            <path id="Menu" d="M38,0C17,0,0,17,0,38s17,38,38,38s38-17,38-38S59,0,38,0z M38,72C19.2,72,4,56.8,4,38S19.2,4,38,4s34,15.2,34,34
+                                S56.8,72,38,72z M57.5,38c0,1.1-0.9,2-2,2h-35c-1.1,0-2-0.9-2-2s0.9-2,2-2h35C56.6,36,57.5,36.9,57.5,38z M57.5,50c0,1.1-0.9,2-2,2
+                                h-35c-1.1,0-2-0.9-2-2s0.9-2,2-2h35C56.6,48,57.5,48.9,57.5,50z M57.5,26c0,1.1-0.9,2-2,2h-35c-1.1,0-2-0.9-2-2s0.9-2,2-2h35
+                                C56.6,24,57.5,24.9,57.5,26z"/>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                    </svg>
+            </div>
             <div class="logo">
                 <img src="/images/logo.png" />
             </div>
@@ -314,6 +374,15 @@
                 });
                 autoplay(true);
         });
+
+        const openMenu = () => {
+            document.querySelectorAll('.menu')[0].classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        const closeMenu = () => {
+            document.querySelectorAll('.menu')[0].classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
     </script>
 </body>
 </html>
